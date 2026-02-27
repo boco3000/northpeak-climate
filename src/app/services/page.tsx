@@ -1,5 +1,5 @@
 import { Section } from "@/components/Section";
-import { ServiceCard } from "@/components/ServiceCard";
+import { ServicesGrid } from "@/components/ServicesGrid";
 import { services } from "@/data/services";
 
 export default function ServicesPage() {
@@ -11,10 +11,8 @@ export default function ServicesPage() {
           HVAC services designed for reliability, comfort, and efficiency.
         </p>
 
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <ServiceCard key={service.id} service={service} />
-          ))}
+        <div className="mt-8">
+          <ServicesGrid services={services} />
         </div>
       </Section>
     </main>
