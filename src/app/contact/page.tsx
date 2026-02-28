@@ -54,6 +54,33 @@ export default function ContactPage({ searchParams }: Props) {
             />
           </FormField>
 
+          <FormField label="Preferred Contact Method" htmlFor="contactMethod">
+            <select
+              id="contactMethod"
+              name="contactMethod"
+              className="w-full rounded-md border bg-white text-black dark:bg-neutral-900 dark:text-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
+            >
+              <option>Email</option>
+              <option>Phone</option>
+            </select>
+          </FormField>
+
+          <FormField label="Service Needed" htmlFor="service">
+            <select
+              id="service"
+              name="service"
+              defaultValue={service?.id ?? ""}
+              className="w-full rounded-md border bg-white text-black dark:bg-neutral-900 dark:text-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
+            >
+              <option value="">Select a service</option>
+              {services.map((s) => (
+                <option key={s.id} value={s.id}>
+                  {s.title}
+                </option>
+              ))}
+            </select>
+          </FormField>
+
           <FormField label="Message" htmlFor="message">
             <textarea
               id="message"
@@ -70,6 +97,10 @@ export default function ContactPage({ searchParams }: Props) {
           >
             Submit Request
           </button>
+          <p className="mt-3 text-xs opacity-60">
+            We typically respond within 1 business day. No spam — just service
+            updates.
+          </p>
         </form>
       </Section>
     </main>

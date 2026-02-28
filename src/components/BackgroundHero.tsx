@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "./Container";
+import { TrustBar } from "./TrustBar";
 
 export function BackgroundHero() {
   return (
@@ -64,6 +65,9 @@ export function BackgroundHero() {
           </dl>
         </div>
       </Container>
+      <div className="relative mt-6">
+        <TrustBar variant="overlay" />
+      </div>
     </section>
   );
 }

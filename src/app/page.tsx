@@ -1,5 +1,5 @@
 import { Section } from "@/components/Section";
-import { Hero } from "@/components/Hero";
+import { ProcessSection } from "@/components/ProcessSection";
 import { BackgroundCTA } from "@/components/BackgroundCTA";
 import { BackgroundHero } from "@/components/BackgroundHero";
 import { ServicesPreview } from "@/components/ServicesPreview";
@@ -9,13 +9,13 @@ export default function Home() {
   return (
     <main>
       <BackgroundHero />
-      <Section>
-        <Hero />
+      <Section reveal>
+        <ProcessSection />
       </Section>
-      <Section>
+      <Section reveal>
         <ServicesPreview />
       </Section>
-      <Section>
+      <Section reveal>
         <ReviewsSection />
       </Section>
       <BackgroundCTA
