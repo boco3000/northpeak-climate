@@ -1,7 +1,7 @@
-import Link from "next/link";
 import Image from "next/image";
 import { Container } from "./Container";
 import { TrustBar } from "./TrustBar";
+import { Button } from "./Button";
 
 export function BackgroundHero() {
   return (
@@ -28,29 +28,27 @@ export function BackgroundHero() {
             Licensed & Insured • Same-day availability
           </p>
 
-          <h1 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
-            Comfort you can count on—heating, cooling, and maintenance.
+          <h1 className="mt-5 text-4xl sm:text-5xl font-semibold tracking-tight">
+            Comfort you can count on-heating, cooling, and maintenance.
           </h1>
 
-          <p className="mt-4 text-base opacity-90">
+          <p className="mt-2 max-w-2xl text-base sm:text-lg opacity-90">
             NorthPeak Climate delivers clear communication, reliable scheduling,
             and quality work to keep your home comfortable year-round.
           </p>
 
           <div className="mt-7 flex flex-wrap gap-3">
-            <Link
-              href="/contact"
-              className="inline-flex items-center rounded-md bg-white px-4 py-2 text-sm font-medium text-black hover:opacity-90"
-            >
+            <Button href="/contact" variant="primary">
               Request Service
-            </Link>
+            </Button>
 
-            <Link
-              href="/services"
-              className="inline-flex items-center rounded-md border border-white/30 px-4 py-2 text-sm font-medium hover:bg-white hover:text-black"
+            <Button
+              href="/#services"
+              variant="outline"
+              className="border-white/30 text-white hover:bg-white hover:text-black"
             >
               View Services
-            </Link>
+            </Button>
           </div>
 
           <dl className="mt-10 grid grid-cols-2 gap-4 text-sm">

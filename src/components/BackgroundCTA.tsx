@@ -1,6 +1,6 @@
-import Link from "next/link";
 import Image from "next/image";
 import { Container } from "./Container";
+import { Button } from "./Button";
 
 type Props = {
   title: string;
@@ -32,15 +32,18 @@ export function BackgroundCTA({
 
       <Container className="relative py-16">
         <div className="max-w-2xl rounded-2xl border border-white/15 bg-white/5 p-6 text-white backdrop-blur">
-          <h2 className="text-2xl font-semibold tracking-tight">{title}</h2>
-          <p className="mt-2 opacity-90">{description}</p>
+          <h2 className="text-3xl font-semibold tracking-tight">{title}</h2>
+          <p className="mt-2 max-w-2xl text-base sm:text-lg opacity-90">
+            {description}
+          </p>
 
-          <Link
+          <Button
             href={ctaHref}
-            className="mt-6 inline-flex items-center rounded-md border border-white/30 px-4 py-2 text-sm font-medium hover:bg-white hover:text-black"
+            variant="outline"
+            className="mt-6 border-white/30 text-white hover:bg-white hover:text-black"
           >
             {ctaLabel}
-          </Link>
+          </Button>
         </div>
       </Container>
     </section>

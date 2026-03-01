@@ -19,8 +19,8 @@ export default function ContactPage({ searchParams }: Props) {
   return (
     <main>
       <Section>
-        <h1 className="text-3xl font-semibold tracking-tight">Contact</h1>
-        <p className="mt-2 max-w-2xl opacity-80">
+        <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">Contact</h1>
+        <p className="mt-2 max-w-2xl text-base sm:text-lg opacity-80">
           Tell us what you need—our team will follow up within 1 business day.
         </p>
 

@@ -6,6 +6,7 @@ export type Service = {
   category: ServiceCategory;
   summary: string;
   ctaLabel: string;
+  imageSrc?: string; 
 };
 
 export const services: Service[] = [
@@ -15,6 +16,7 @@ export const services: Service[] = [
     category: "Cooling",
     summary: "Fast diagnostics and reliable fixes to restore comfort quickly.",
     ctaLabel: "Request Service",
+    imageSrc: "/images/services/ac-repair.jpg",
   },
   {
     id: "furnace-repair",
@@ -22,6 +24,7 @@ export const services: Service[] = [
     category: "Heating",
     summary: "Safe, efficient repairs for gas and electric heating systems.",
     ctaLabel: "Request Service",
+    imageSrc: "/images/services/furnace-repair.jpg",
   },
   {
     id: "system-install",
@@ -29,6 +32,7 @@ export const services: Service[] = [
     category: "Heating",
     summary: "New installs sized to your home for efficiency and long-term savings.",
     ctaLabel: "Get an Estimate",
+    imageSrc: "/images/services/system-install.jpg",
   },
   {
     id: "seasonal-tuneup",

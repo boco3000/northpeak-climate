@@ -6,8 +6,8 @@ export default function ServicesPage() {
   return (
     <main>
       <Section>
-        <h1 className="text-3xl font-semibold tracking-tight">Services</h1>
-        <p className="mt-2 max-w-2xl opacity-80">
+        <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">Services</h1>
+        <p className="mt-2 max-w-2xl text-base sm:text-lg opacity-80">
           HVAC services designed for reliability, comfort, and efficiency.
         </p>
 

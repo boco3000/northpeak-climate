@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Container } from "./Container";
 import { useState } from "react";
+import { Button } from "./Button";
 
 const nav = [
   { href: "/", label: "Home" },
@@ -54,12 +55,9 @@ export function Navbar() {
             {open ? "Close" : "Menu"}
           </button>
 
-          <Link
-            href="/contact"
-            className="inline-flex items-center rounded-md border px-4 py-2 text-sm font-medium hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
-          >
+          <Button href="/contact" variant="outline">
             Request Service
-          </Link>
+          </Button>
         </div>
       </Container>
 

@@ -13,7 +13,7 @@ export function ServicesPreview() {
           <h2 className="mt-2 text-3xl font-semibold tracking-tight">
             Comfort solutions for every season.
           </h2>
-          <p className="mt-2 max-w-2xl opacity-80">
+          <p className="mt-2 max-w-2xl text-base sm:text-lg opacity-80">
             From fast repairs to preventative maintenance, we keep your system
             running efficiently year-round.
           </p>
@@ -29,7 +29,7 @@ export function ServicesPreview() {
 
       <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {featured.map((service) => (
-          <ServiceCard key={service.id} service={service} />
+          <ServiceCard key={service.id} service={service} variant="media" />
         ))}
       </div>
 

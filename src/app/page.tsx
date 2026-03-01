@@ -12,16 +12,18 @@ export default function Home() {
       <Section reveal>
         <ProcessSection />
       </Section>
-      <Section reveal>
-        <ServicesPreview />
-      </Section>
+      <section id="services">
+        <Section reveal>
+          <ServicesPreview />
+        </Section>
+      </section>
       <Section reveal>
         <ReviewsSection />
       </Section>
       <BackgroundCTA
         title="Need help today?"
         description="Tell us what’s going on and we’ll get back to you quickly with next steps."
-        imageSrc="/images/hero.jpg"
+        imageSrc="/images/hvac-cta.jpg"
         ctaHref="/contact"
         ctaLabel="Request Service"
       />
