@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { Service } from "@/data/services";
+import { Button } from "./Button";
 
 type Props = {
   service: Service;
@@ -27,10 +27,10 @@ export function ServiceCard({ service, variant = "default" }: Props) {
               alt=""
               fill
               sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-              className="object-cover transition duration-300 group-hover:blur-[2px] group-hover:scale-[1.02]"
+              className="object-cover transition duration-200 group-hover:blur-[2px] group-hover:scale-[1.02]"
             />
             {/* readability overlay */}
-            <div className="absolute inset-0 bg-black/50 transition duration-300 group-hover:bg-black/60" />
+            <div className="absolute inset-0 bg-black/50 transition duration-200 group-hover:bg-black/60" />
           </div>
 
           {/* Foreground content */}
@@ -41,26 +41,30 @@ export function ServiceCard({ service, variant = "default" }: Props) {
             <h3 className="mt-2 text-lg font-semibold">{service.title}</h3>
             <p className="mt-2 text-sm opacity-80">{service.summary}</p>
 
-            <Link
+            <Button
               href={`/contact?service=${service.id}`}
-              className="mt-4 inline-flex items-center rounded-md border border-white/30 bg-white/10 px-3 py-2 text-sm font-medium hover:bg-white hover:text-black transition"
+              variant="outline"
+              className="mt-4 border-white/30 text-white bg-white/10 hover:bg-white hover:text-black"
             >
               {service.ctaLabel}
-            </Link>
+            </Button>
           </div>
         </>
       ) : (
         <>
-          <div className="text-xs font-medium opacity-70">{service.category}</div>
+          <div className="text-xs font-medium opacity-70">
+            {service.category}
+          </div>
           <h3 className="mt-2 text-lg font-semibold">{service.title}</h3>
           <p className="mt-2 text-sm opacity-80">{service.summary}</p>
 
-          <Link
+          <Button
             href={`/contact?service=${service.id}`}
-            className="mt-4 inline-flex items-center rounded-md border px-3 py-2 text-sm font-medium hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition"
+            variant="outline"
+            className="mt-4"
           >
             {service.ctaLabel}
-          </Link>
+          </Button>
         </>
       )}
     </article>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "./Container";
+import { Button } from "./Button";
 
 type Item = {
   title: string;
@@ -53,17 +54,14 @@ export function TrustBar({ variant = "default" }: Props) {
         </div>
 
         <div className={isOverlay ? "mt-6 text-sm" : "mt-4 text-sm"}>
-  <Link
-    href="/contact"
-    className={
-      isOverlay
-        ? "inline-flex items-center rounded-md border border-white/30 px-4 py-2 text-sm font-medium text-white hover:bg-white hover:text-black transition"
-        : "underline opacity-80 hover:opacity-100"
-    }
-  >
-    Request a quote
-  </Link>
-</div>
+          <Button
+            href="/contact"
+            variant="outline"
+            className="border-white/30 text-white hover:bg-white hover:text-black"
+          >
+            Request a quote
+          </Button>
+        </div>
       </Container>
     </section>
   );

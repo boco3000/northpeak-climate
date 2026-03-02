@@ -93,7 +93,7 @@ export default function ContactPage({ searchParams }: Props) {
 
           <button
             type="submit"
-            className="inline-flex items-center rounded-md border px-4 py-2 text-sm font-medium hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
+            className="inline-flex items-center rounded-md border px-4 py-2 text-sm font-medium transition duration-200 ease-out hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
           >
             Submit Request
           </button>

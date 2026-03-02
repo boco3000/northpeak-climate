@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { services } from "@/data/services";
 import { ServiceCard } from "./ServiceCard";
+import { Button } from "./Button";
 
 export function ServicesPreview() {
   const featured = services.slice(0, 3);
@@ -19,12 +20,13 @@ export function ServicesPreview() {
           </p>
         </div>
 
-        <Link
+        <Button
           href="/services"
-          className="hidden shrink-0 rounded-md border px-4 py-2 text-sm font-medium hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black sm:inline-flex"
+          variant="outline"
+          className="hidden shrink-0 sm:inline-flex"
         >
           View all services
-        </Link>
+        </Button>
       </div>
 
       <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -33,12 +35,9 @@ export function ServicesPreview() {
         ))}
       </div>
 
-      <Link
-        href="/services"
-        className="mt-6 inline-flex rounded-md border px-4 py-2 text-sm font-medium hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black sm:hidden"
-      >
+      <Button href="/services" variant="outline" className="mt-6 sm:hidden">
         View all services
-      </Link>
+      </Button>
     </div>
   );
 }

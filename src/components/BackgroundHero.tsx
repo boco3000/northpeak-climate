@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Container } from "./Container";
 import { TrustBar } from "./TrustBar";
 import { Button } from "./Button";
+import { ScrollToIdButton } from "./ScrollToIdButton";
 
 export function BackgroundHero() {
   return (
@@ -42,13 +43,14 @@ export function BackgroundHero() {
               Request Service
             </Button>
 
-            <Button
+            <ScrollToIdButton
+              targetId="services"
               href="/#services"
               variant="outline"
               className="border-white/30 text-white hover:bg-white hover:text-black"
             >
               View Services
-            </Button>
+            </ScrollToIdButton>
           </div>
 
           <dl className="mt-10 grid grid-cols-2 gap-4 text-sm">

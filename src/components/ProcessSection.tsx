@@ -46,7 +46,7 @@ export function ProcessSection() {
               key={step.title}
               className={`[transition-delay:${idx * 80}ms]`}
             >
-              <div className="rounded-xl border bg-white/50 p-5 backdrop-blur-sm dark:bg-white/5 transition hover:-translate-y-0.5 hover:shadow-sm">
+              <div className="rounded-xl border bg-white/50 p-5 backdrop-blur-sm dark:bg-white/5 transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-sm">
                 <div className="text-sm font-medium">{step.title}</div>
                 <p className="mt-2 text-sm opacity-80 leading-relaxed">
                   {step.body}

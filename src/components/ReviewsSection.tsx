@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { reviews } from "@/data/reviews";
 import { ReviewCard } from "./ReviewCard";
+import { Button } from "./Button";
 
 export function ReviewsSection() {
   const featured = reviews.slice(0, 3);
@@ -42,12 +43,13 @@ export function ReviewsSection() {
           </div>
         </div>
 
-        <Link
+        <Button
           href="/contact"
-          className="hidden shrink-0 rounded-md border px-4 py-2 text-sm font-medium hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black sm:inline-flex"
+          variant="outline"
+          className="hidden shrink-0 sm:inline-flex"
         >
           Get a quote
-        </Link>
+        </Button>
       </div>
 
       <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">

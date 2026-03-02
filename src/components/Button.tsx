@@ -27,7 +27,7 @@ export function Button(props: Props) {
   const { variant = "outline", size = "md", className = "", children } = props;
 
   const base =
-    "inline-flex items-center justify-center rounded-md border font-medium transition " +
+    "inline-flex items-center justify-center rounded-md border font-medium transition duration-200 ease-out " +
     "active:scale-[0.98] motion-reduce:active:scale-100";
 
   const sizes = size === "sm" ? "px-3 py-2 text-sm" : "px-4 py-2 text-sm";

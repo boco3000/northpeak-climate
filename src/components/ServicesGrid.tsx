@@ -50,7 +50,7 @@ export function ServicesGrid({ services }: Props) {
               key={cat}
               type="button"
               onClick={() => setActiveCategory(cat)}
-              className={`rounded-full border px-3 py-1 text-sm transition ${
+              className={`rounded-full border px-3 py-1 text-sm transition duration-200 ease-out ${
                 isActive
                   ? "bg-black text-white dark:bg-white dark:text-black"
                   : "opacity-80 hover:opacity-100"

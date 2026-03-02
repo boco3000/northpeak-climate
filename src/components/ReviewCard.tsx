@@ -33,7 +33,7 @@ export function ReviewCard({ review }: Props) {
       : "bg-black/40 dark:bg-white/40";
 
   return (
-    <article className="group relative overflow-hidden rounded-2xl border bg-white/60 p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:bg-white/5">
+    <article className="group relative overflow-hidden rounded-2xl border bg-white/60 p-5 shadow-sm transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-sm dark:bg-white/5">
       {/* accent strip */}
       <div className={`absolute left-0 top-0 h-full w-1 ${accent}`} />
 
