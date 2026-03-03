@@ -9,8 +9,6 @@ type Props = {
 };
 
 export function ServicesGrid({ services }: Props) {
-  const [query, setQuery] = useState("");
-
   const categories: Array<"All" | ServiceCategory> = [
     "All",
     "Heating",
@@ -19,25 +17,29 @@ export function ServicesGrid({ services }: Props) {
     "Air Quality",
   ];
 
+  const pillStyles: Record<string, string> = {
+    All: "bg-transparent text-inherit border opacity-80 hover:opacity-100",
+    Heating:
+      "border-orange-500/30 bg-orange-500/10 text-orange-700 hover:bg-orange-500/15 dark:text-orange-300 dark:bg-orange-400/10 dark:border-orange-300/30",
+    Cooling:
+      "border-sky-500/30 bg-sky-500/10 text-sky-700 hover:bg-sky-500/15 dark:text-sky-300 dark:bg-sky-400/10 dark:border-sky-300/30",
+    Maintenance:
+      "border-amber-500/30 bg-amber-500/10 text-amber-700 hover:bg-amber-500/15 dark:text-amber-300 dark:bg-amber-400/10 dark:border-amber-300/30",
+    "Air Quality":
+      "border-emerald-500/30 bg-emerald-500/10 text-emerald-700 hover:bg-emerald-500/15 dark:text-emerald-300 dark:bg-emerald-400/10 dark:border-emerald-300/30",
+  };
+
   const [activeCategory, setActiveCategory] =
     useState<(typeof categories)[number]>("All");
 
   const filtered = useMemo(() => {
-    const q = query.toLowerCase().trim();
-
     return services.filter((service) => {
       const matchesCategory =
         activeCategory === "All" || service.category === activeCategory;
 
-      const matchesQuery =
-        q.length === 0 ||
-        service.title.toLowerCase().includes(q) ||
-        service.category.toLowerCase().includes(q) ||
-        service.summary.toLowerCase().includes(q);
-
-      return matchesCategory && matchesQuery;
+      return matchesCategory;
     });
-  }, [query, services, activeCategory]);
+  }, [services, activeCategory]);
 
   return (
     <div>
@@ -50,24 +52,18 @@ export function ServicesGrid({ services }: Props) {
               key={cat}
               type="button"
               onClick={() => setActiveCategory(cat)}
-              className={`rounded-full border px-3 py-1 text-sm transition duration-200 ease-out ${
+              className={[
+                "rounded-full border px-3 py-1 text-sm transition duration-200 ease-out",
                 isActive
                   ? "bg-black text-white dark:bg-white dark:text-black"
-                  : "opacity-80 hover:opacity-100"
-              }`}
+                  : (pillStyles[cat] ?? "opacity-80 hover:opacity-100"),
+              ].join(" ")}
             >
               {cat}
             </button>
           );
         })}
       </div>
-      <input
-        type="text"
-        placeholder="Search services..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        className="w-full rounded-md border px-3 py-2 text-sm outline-none focus:ring-2"
-      />
 
       <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.length > 0 ? (
