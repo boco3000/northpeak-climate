@@ -18,7 +18,7 @@ const serviceLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t">
+    <footer className="border-t border-white/10 bg-black/30">
       <Container className="py-12">
         <div className="grid gap-10 md:grid-cols-4">
           {/* Brand */}

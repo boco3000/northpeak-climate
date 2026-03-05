@@ -5,46 +5,64 @@ import { Button } from "@/components/Button";
 export default function AboutPage() {
   return (
     <main>
-      {/* Intro */}
-      <Section reveal>
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-          <div>
-            <p className="text-sm font-medium opacity-70">About</p>
+      {/* Intro (background hero) */}
+      <section className="relative overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0 -z-10">
+          {/* Using ImagePanel's image as the background */}
+          <img
+            src="/images/about-us.jpg"
+            alt=""
+            className="h-full w-full object-cover"
+          />
+          {/* readability overlays */}
+          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/20" />
+        </div>
+
+        <Section reveal className="py-16 sm:py-20">
+          <div className="max-w-2xl text-white">
+            <p className="text-sm font-medium opacity-80">About</p>
+
             <h1 className="mt-2 text-4xl font-semibold tracking-tight sm:text-5xl">
               Local HVAC pros focused on comfort, clarity, and craftsmanship.
             </h1>
-            <p className="mt-4 max-w-2xl text-base sm:text-lg opacity-80">
-              NorthPeak Climate is built around clear communication and reliable
-              scheduling—so homeowners know what to expect and feel confident in
-              the work being done.
-            </p>
 
+            {/* Glass card for the paragraph */}
+            <div className="mt-5 rounded-2xl border border-white/15 bg-white/5 p-5 backdrop-blur-md sm:p-6">
+              <p className="text-base leading-relaxed text-white/90 sm:text-lg">
+                NorthPeak Climate is built around clear communication and
+                reliable scheduling—so homeowners know what to expect and feel
+                confident in the work being done.
+              </p>
+            </div>
+
+            {/* Buttons stay under the text */}
             <div className="mt-6 flex flex-wrap gap-3">
-              <Button href="/contact" variant="outline">
+              <Button
+                href="/contact"
+                variant="outline"
+                className="border-white/30 text-white hover:bg-white hover:text-black"
+              >
                 Request Service
               </Button>
-              <Button href="/services" variant="ghost">
+
+              <Button
+                href="/services"
+                variant="ghost"
+                className="text-white hover:bg-white/10"
+              >
                 View Services
               </Button>
             </div>
+
+            {/* Optional: keep the “Our promise” overlay content, now as a small pill */}
+            <div className="mt-8 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-sm text-white/90 backdrop-blur">
+              Our promise: Do the job right—then stand behind it.
+            </div>
           </div>
-
-          <ImagePanel
-            src="/images/about-us.jpg"
-            alt="Technician and homeowner discussing HVAC system"
-            aspect="16/9"
-            overlay={
-              <>
-                <p className="text-sm opacity-90">Our promise</p>
-                <h2 className="mt-2 text-xl font-semibold">
-                  Do the job right—then stand behind it.
-                </h2>
-              </>
-            }
-          />
-        </div>
-      </Section>
-
+        </Section>
+      </section>
       {/* Values */}
       <Section reveal>
         <div>

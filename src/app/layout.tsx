@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+import { FooterOnBackground } from "@/components/FooterOnBackground";
 
 export const metadata: Metadata = {
   title: "NorthPeak Climate",
@@ -19,7 +19,7 @@ export default function RootLayout({
         <div className="min-h-dvh">
           <Navbar />
           {children}
-          <Footer />
+          <FooterOnBackground />
         </div>
       </body>
     </html>

@@ -19,7 +19,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="border-b">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/60 backdrop-blur supports-[backdrop-filter]:bg-black/50">
       <Container className="flex h-24 items-center justify-between sm:h-28">
         <Link
           href="/"
@@ -45,7 +45,7 @@ export function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`transition hover:underline ${
+                  className={`rounded-md px-2 py-1 transition duration-200 ease-out hover:bg-white/5 hover:underline ${
                     isActive
                       ? "font-medium underline"
                       : "opacity-80 hover:opacity-100"
