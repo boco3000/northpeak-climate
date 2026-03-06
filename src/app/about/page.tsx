@@ -64,7 +64,7 @@ export default function AboutPage() {
         </Section>
       </section>
       {/* Values */}
-      <Section reveal>
+      <Section reveal tone="soft">
         <div>
           <p className="text-sm font-medium opacity-70">What we value</p>
           <h2 className="mt-2 text-3xl font-semibold tracking-tight">
@@ -104,7 +104,7 @@ export default function AboutPage() {
       </Section>
 
       {/* How we work (short) */}
-      <Section reveal>
+      <Section reveal tone="raised">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <div>
             <p className="text-sm font-medium opacity-70">How we work</p>
