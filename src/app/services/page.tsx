@@ -1,6 +1,13 @@
 import { Section } from "@/components/Section";
 import { ServicesGrid } from "@/components/ServicesGrid";
 import { services } from "@/data/services";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Services",
+  description:
+    "Explore NorthPeak Climate's HVAC services including AC repair, furnace repair, system installation, and maintenance.",
+};
 
 export default function ServicesPage() {
   return (

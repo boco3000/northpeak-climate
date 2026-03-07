@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { reviews } from "@/data/reviews";
 import { ReviewCard } from "./ReviewCard";
 import { Button } from "./Button";

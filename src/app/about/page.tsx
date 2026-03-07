@@ -1,6 +1,12 @@
 import { Section } from "@/components/Section";
-import { ImagePanel } from "@/components/ImagePanel";
 import { Button } from "@/components/Button";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Learn about NorthPeak Climate and our commitment to reliable HVAC service and clear communication.",
+};
 
 export default function AboutPage() {
   return (
