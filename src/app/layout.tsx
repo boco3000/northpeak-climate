@@ -4,7 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { FooterOnBackground } from "@/components/FooterOnBackground";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://northpeakclimate.com"), // change after deploy if needed
+  metadataBase: new URL("https://northpeak-climate.vercel.app/"), 
 
   title: {
     default: "NorthPeak Climate",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "NorthPeak Climate",
     description:
       "Reliable heating, cooling, and maintenance services with clear communication and dependable scheduling.",
-    url: "https://northpeakclimate.com", // change after deploy if needed
+    url: "https://northpeak-climate.vercel.app/", 
     siteName: "NorthPeak Climate",
     images: [
       {
@@ -50,7 +50,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "HVACBusiness",
   name: "NorthPeak Climate",
-  url: "https://your-domain.com", //
+  url: "https://northpeak-climate.vercel.app/", 
   telephone: "(555) 555-0199",
   email: "hello@northpeakclimate.com",
   description:
