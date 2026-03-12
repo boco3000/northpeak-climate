@@ -1,36 +1,197 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <a href="https://northpeak-climate.vercel.app"><strong>Live Demo</strong></a>
+  ·
+  <a href="#overview"><strong>Overview</strong></a>
+  ·
+  <a href="#pages"><strong>Pages</strong></a>
+  ·
+  <a href="#tech-stack"><strong>Tech Stack</strong></a>
+  ·
+  <a href="#getting-started"><strong>Run Locally</strong></a>
+</p>
 
-## Getting Started
+<p align="center">
+  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-App%20Router-000000?logo=nextdotjs&logoColor=white" />
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-Strict-3178C6?logo=typescript&logoColor=white" />
+  <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind-CSS-38B2AC?logo=tailwindcss&logoColor=white" />
+  <img alt="Vercel" src="https://img.shields.io/badge/Deployment-Vercel-000000?logo=vercel&logoColor=white" />
+</p>
 
-First, run the development server:
+<h1 align="center">NorthPeak Climate</h1>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+<p align="center">
+  <strong>Modern HVAC service website</strong> built with Next.js and Tailwind CSS.<br/>
+  Designed as a realistic small-business website with strong calls-to-action, responsive layout, and SEO-ready structure.
+</p>
+
+---
+
+# Live Demo
+
+https://northpeak-climate.vercel.app
+
+---
+
+# Overview
+
+NorthPeak Climate is a fictional HVAC service company website created to demonstrate how a modern home-service business website can be structured and implemented using a component-based frontend architecture.
+
+The project focuses on:
+
+* Clean UI design for service businesses
+* Conversion-focused page structure
+* Reusable component architecture
+* SEO-ready metadata and OpenGraph previews
+* Responsive design for mobile and desktop
+
+This type of site is representative of real projects built for local service companies such as HVAC, plumbing, electrical, and home maintenance businesses.
+
+---
+
+# Pages
+
+### Home
+
+* Background hero with service CTA
+* Service preview cards
+* Service process overview
+* Customer reviews section
+
+### About
+
+* Company overview
+* Service philosophy
+* Core business values
+* Service area highlights
+
+### Services
+
+* Filterable services grid
+* Category-based color coding
+* Detailed service cards
+
+### Contact
+
+* Service request form
+* Service pre-selection from services page
+* Business contact details and hours
+
+---
+
+# Tech Stack
+
+| Category      | Tools                             |
+| ------------- | --------------------------------- |
+| Framework     | Next.js (App Router)              |
+| Language      | TypeScript                        |
+| Styling       | Tailwind CSS                      |
+| Deployment    | Vercel                            |
+| Form Handling | Formspree                         |
+| Metadata      | Next.js Metadata API              |
+| SEO           | OpenGraph + Local Business Schema |
+
+---
+
+# Key Features
+
+* Fully responsive layout
+* Dark/light theme support
+* Mobile navigation with animated menu
+* Service filtering UI
+* Reusable component architecture
+* Structured data for local business SEO
+* Social sharing previews with OpenGraph image
+* Contact form with service prefill
+
+---
+
+# Project Structure
+
+```
+src
+ ├── app
+ │   ├── about
+ │   ├── contact
+ │   ├── services
+ │   ├── layout.tsx
+ │   └── page.tsx
+ │
+ ├── components
+ │   ├── Navbar
+ │   ├── Footer
+ │   ├── Button
+ │   ├── ServiceCard
+ │   ├── ServicesGrid
+ │   ├── ImagePanel
+ │   ├── Section
+ │   └── FormField
+ │
+ ├── data
+ │   └── services.ts
+ │
+ └── styles
+     └── globals.css
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Install dependencies
 
-## Learn More
+```
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Run development server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Visit:
 
-## Deploy on Vercel
+```
+http://localhost:3000
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Production build
+
+```
+npm run build
+npm start
+```
+
+---
+
+# Deployment
+
+This project is configured for deployment on **Vercel**.
+
+Steps:
+
+1. Push repository to GitHub
+2. Import project in Vercel
+3. Deploy using default Next.js settings
+
+---
+
+# Future Improvements
+
+Possible enhancements for a production deployment:
+
+* Appointment scheduling
+* Google Reviews integration
+* Blog or resource section
+* CMS integration
+* Service area landing pages for SEO
+
+---
+
+# Author
+
+**Bo Cochran**
+
+Frontend developer focused on building modern web applications and service-business websites using React and Next.js.
