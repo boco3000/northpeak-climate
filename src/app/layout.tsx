@@ -37,14 +37,33 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "NorthPeak Climate",
-    description:
-      "Reliable heating, cooling, and maintenance services.",
+    description: "Reliable heating, cooling, and maintenance services.",
     images: ["/npc-opengraph-image.jpg"],
   },
 
   icons: {
     icon: "/favicon.ico",
   },
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "HVACBusiness",
+  name: "NorthPeak Climate",
+  url: "https://your-domain.com", //
+  telephone: "(555) 555-0199",
+  email: "hello@northpeakclimate.com",
+  description:
+    "NorthPeak Climate provides reliable HVAC repair, installation, and maintenance with clear communication and professional service.",
+  areaServed: "Your local area and nearby towns",
+  serviceType: [
+    "AC Repair",
+    "Furnace Repair",
+    "System Installation",
+    "Seasonal Maintenance",
+    "Indoor Air Quality",
+  ],
+  openingHours: ["Mo-Fr 08:00-18:00", "Sa 09:00-14:00"],
 };
 
 export default function RootLayout({
@@ -55,6 +74,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
         <div className="min-h-dvh">
           <Navbar />
           {children}
