@@ -27,9 +27,9 @@ export function FooterOnBackground() {
 
       <Container className="py-10 sm:py-12">
         {/* Top row */}
-        <div className="grid gap-8 md:grid-cols-3 md:items-start">
+        <div className="grid gap-8 grid-cols-2 md:grid-cols-3 md:items-start">
           {/* Brand */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <div className="text-lg font-semibold text-white">
               NorthPeak Climate
             </div>
@@ -48,7 +48,7 @@ export function FooterOnBackground() {
           </div>
 
           {/* Quick links */}
-          <div className="md:justify-self-center">
+          <div>
             <div className="text-sm font-semibold text-white">Quick links</div>
             <nav className="mt-3 flex flex-col gap-2 text-sm">
               {[
@@ -68,7 +68,7 @@ export function FooterOnBackground() {
           </div>
 
           {/* Services list */}
-          <div className="md:justify-self-end md:text-right">
+          <div className="md:text-right">
             <div className="text-sm font-semibold text-white">Services</div>
             <ul className="mt-3 space-y-2 text-sm">
               {services.map((service) => (
@@ -86,23 +86,23 @@ export function FooterOnBackground() {
         </div>
 
         {/* Cards row (blurred panels) */}
-        <div className="mt-8 grid gap-3 md:grid-cols-3">
-          <div className="rounded-2xl border border-white/15 bg-white/5 p-5 text-white backdrop-blur-md">
+        <div className="mt-8 grid grid-cols-2 gap-4 text-sm md:grid-cols-3">
+          <div className="rounded-2xl border border-white/15 bg-white/5 p-4 text-white backdrop-blur-md">
             <div className="text-sm font-semibold">Contact</div>
             <div className="mt-2 text-sm text-white/80">(555) 555-0199</div>
-            <div className="text-sm text-white/80">
+            <div className="break-words text-xs text-white/80 sm:text-sm">
               hello@northpeakclimate.com
             </div>
           </div>
 
-          <div className="rounded-2xl border border-white/15 bg-white/5 p-5 text-white backdrop-blur-md">
+          <div className="rounded-2xl border border-white/15 bg-white/5 p-4 text-white backdrop-blur-md">
             <div className="text-sm font-semibold">Hours</div>
             <div className="mt-2 text-sm text-white/80">Mon–Fri: 8am–6pm</div>
             <div className="text-sm text-white/80">Sat: 9am–2pm</div>
             <div className="text-sm text-white/80">Sun: Closed</div>
           </div>
 
-          <div className="rounded-2xl border border-white/15 bg-white/5 p-5 text-white backdrop-blur-md">
+          <div className="col-span-2 rounded-2xl border border-white/15 bg-white/5 p-4 text-white backdrop-blur-md md:col-span-1">
             <div className="text-sm font-semibold">Service area</div>
             <p className="mt-2 text-sm text-white/80">
               Serving your local area and nearby towns. Ask about same-day

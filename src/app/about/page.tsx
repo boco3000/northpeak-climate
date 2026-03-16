@@ -64,7 +64,7 @@ export default function AboutPage() {
 
             {/* Optional: keep the “Our promise” overlay content, now as a small pill */}
             <div className="mt-8 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-sm text-white/90 backdrop-blur">
-              Our promise: Do the job right—then stand behind it.
+              Our promise: Do the job right - then stand behind it.
             </div>
           </div>
         </Section>
