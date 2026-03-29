@@ -111,7 +111,7 @@ export default function AboutPage() {
 
       {/* How we work (short) */}
       <Section reveal tone="raised">
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
+        <div className="grid gap-10">
           <div>
             <p className="text-sm font-medium opacity-70">How we work</p>
             <h2 className="mt-2 text-3xl font-semibold tracking-tight">
